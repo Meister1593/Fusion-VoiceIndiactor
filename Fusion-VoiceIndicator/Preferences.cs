@@ -18,8 +18,6 @@ namespace FusionVoiceIndicator
         {
             currentCategory = category;
             showIndicator = category.CreateEntry("Show Indicator", true);
-            playSound = category.CreateEntry("Play Sound", true);
-            soundVolume = category.CreateEntry("Sound volume", 1.0f);
         }
 
         // May need to find a better solution...

@@ -12,7 +12,6 @@ namespace FusionVoiceIndicator
         {
             MelonLogger.Msg("Loading...");
             ModuleHandler.LoadModule(System.Reflection.Assembly.GetExecutingAssembly());
-            AssetManager.Initialize();
             VoiceIndicatorManager.Initialize();
             Preferences.Initialize();
             BoneMenu.Initialize();

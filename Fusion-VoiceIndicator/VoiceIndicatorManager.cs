@@ -18,14 +18,6 @@ namespace FusionVoiceIndicator
         public static void MutedStateListener(bool muteState)
         {
             MuteState = muteState;
-            if (muteState)
-            {
-                AudioManager.Play(AssetManager.muteAudio);
-            }
-            else
-            {
-                AudioManager.Play(AssetManager.unmuteAudio);
-            }
             MelonLogger.Msg($"Muted state now: {MuteState}");
         }
 

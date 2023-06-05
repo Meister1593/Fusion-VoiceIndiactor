@@ -7,11 +7,9 @@ namespace FusionVoiceIndicator
 {
     public class FusionVoiceIndicatorMod : MelonMod
     {
-        public static FusionVoiceIndicatorMod Instance;
 
         public override void OnInitializeMelon()
         {
-            Instance = this;
             MelonLogger.Msg("Loading...");
             ModuleHandler.LoadModule(System.Reflection.Assembly.GetExecutingAssembly());
             AssetManager.Initialize();

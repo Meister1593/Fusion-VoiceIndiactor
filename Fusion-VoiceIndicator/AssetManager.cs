@@ -6,7 +6,7 @@ using AudioImportLib;
 
 namespace FusionVoiceIndicator
 {
-    internal static class AssetManager
+    public static class AssetManager
     {
         static readonly string userDataPath = MelonUtils.UserDataDirectory;
         static readonly string modStoragePath = $"{userDataPath}/Fusion-VoiceIndicator";

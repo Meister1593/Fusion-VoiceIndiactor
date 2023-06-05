@@ -2,13 +2,13 @@ using UnityEngine;
 
 namespace FusionVoiceIndicator
 {
-    internal static class AudioManager
+    public static class AudioManager
     {
         private static GameObject audioManagerObject;
 
         public static void Play(AudioClip clip)
         {
-            audioManagerObject = audioManagerObject ? audioManagerObject : new GameObject($"{FusionVoiceIndicator.BuildInfo.Name} AudioManager");
+            audioManagerObject = audioManagerObject ? audioManagerObject : new GameObject("Fusion-VoiceIndicator AudioManager");
             AudioSource audioSource = audioManagerObject.GetComponent<AudioSource>() ? audioManagerObject.GetComponent<AudioSource>() : audioManagerObject.AddComponent<AudioSource>();
             audioSource.PlayOneShot(clip, 0.7f);
         }

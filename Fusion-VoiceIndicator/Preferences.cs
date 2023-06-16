@@ -7,8 +7,6 @@ namespace FusionVoiceIndicator
     {
         private static MelonPreferences_Category currentCategory;
         public static MelonPreferences_Entry<bool> showIndicator;
-        public static MelonPreferences_Entry<bool> playSound;
-        public static MelonPreferences_Entry<float> soundVolume;
 
         public static void Initialize()
         {
@@ -17,7 +15,7 @@ namespace FusionVoiceIndicator
         private static void CreateMelonPreferences(MelonPreferences_Category category)
         {
             currentCategory = category;
-            showIndicator = category.CreateEntry("Show Indicator", true);
+            showIndicator = category.CreateEntry("Show Indicator", false);
         }
 
         // May need to find a better solution...

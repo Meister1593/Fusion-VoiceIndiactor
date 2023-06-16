@@ -7,7 +7,8 @@ namespace FusionVoiceIndicator
     internal class BoneMenu
     {
         private static MenuCategory mainCategory;
-        public static void Initialize(){
+        public static void Initialize()
+        {
             mainCategory = MenuManager.CreateCategory("FusionVoiceIndicator", Color.yellow);
             CreateBoneMenu(mainCategory);
         }
@@ -18,6 +19,14 @@ namespace FusionVoiceIndicator
             {
                 FusionVoiceIndicator.Preferences.showIndicator.Value = state;
                 FusionVoiceIndicator.Preferences.ManualSave();
+                if (state)
+                {
+                    VoiceIndicator.Initialize();
+                }
+                else
+                {
+                    VoiceIndicator.Uninitialize();
+                }
             });
         }
     }
